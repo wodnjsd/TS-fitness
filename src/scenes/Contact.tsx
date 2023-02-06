@@ -11,7 +11,7 @@ type Props = {
 }
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mt-5 w-full rounded-lg bg-pink-300 px-5 py-3 placeholder-white`
+  const inputStyles = `mt-5 w-full bg-black border-b-2 px-5 py-3 placeholder-white`
 
   const {
     register,
@@ -28,9 +28,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
 
   return (
-    <section id="contact" className="mx-auto w-5/6 pt-24 pb-32">
+    <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
 
-      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)} >
+      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)} >
         <motion.div className="md:w-3/5"
           initial="hidden"
           whileInView="visible"
@@ -41,10 +41,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}>
           <HeaderText>
-            <span className="text-pink-500">JOIN NOW</span> TO GET IN SHAPE
+            <span className="text-salmon-20">JOIN NOW</span> TO GET IN SHAPE
           </HeaderText>
-          <p className="my-5">
-            fjdsaklf;jwkoa;wejifojergirej;fklsa;d
+          <p className="my-5 text-gray-300">
+            Contact us for more information
           </p>
 
         </motion.div>
@@ -65,15 +65,13 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               method="POST">
               <input className={inputStyles}
                 type="text"
-                placeholder="NAME"
+                placeholder="FULL NAME"
                 {...register("name", {
                   required: true,
                   maxLength: 100,
-
-
                 })} />
               {errors.name && (
-                <p className="mt-1 text-pink-500">
+                <p className="mt-1 text-salmon-20">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" && "Max length exceeded (100 char)"}
 
@@ -89,7 +87,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
                 })} />
               {errors.name && (
-                <p className="mt-1 text-pink-500">
+                <p className="mt-1 text-salmon-20">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "pattern" && "Invalid email address."}
 
@@ -106,7 +104,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
                 })} />
               {errors.name && (
-                <p className="mt-1 text-pink-500">
+                <p className="mt-1 text-salmon-20">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" && "Max length exceeded (2000 char)"}
 
@@ -114,7 +112,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               )}
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-purple-400 px-20 py-3 transition duration-500 hover:text-white">
+                className="mt-5 rounded-sm bg-salmon-10 px-20 py-3 transition duration-500 hover:text-white hover:bg-salmon-20">
                 SUBMIT
               </button>
 

@@ -15,7 +15,7 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(mid-width:1060px)")
 
   return (
-    <section id="home" className="gap-16 bg-gray-50 py-10 md:h-full md:pb-0">
+    <section id="home" className="gap-16 bg-black py-10 md:h-full md:pb-0">
       {/* image and header  */}
       <motion.div className="md:flex mx-auto w-5/6 items-center justify-center"
       onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
@@ -32,13 +32,13 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}>
             <div>
-              <div className="text-5xl uppercase font-bold">
+              <div className="text-6xl text-white uppercase font-bold">
                 <h1 className="">Shape Your</h1>
                 <h1 className="">Ideal Body</h1>
 
               </div>
             </div>
-            <p className="mt-8 text-md ">World class studios and trainers to help you shape and build your ideal body </p>
+            <p className="mt-8 text-md text-gray-300">World class studios and trainers to help you shape and build your ideal body </p>
 
           </motion.div>
 
@@ -54,9 +54,9 @@ const Home = ({ setSelectedPage }: Props) => {
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
             </ActionButton>
-            <AnchorLink className="text-sm font-bold text-gray-500 hover:text-pink-700"
-              onClick={() => setSelectedPage(SelectedPage.Contact)}
-              href={`#${SelectedPage.Contact}`}>
+            <AnchorLink className="text-sm font-bold text-white hover:text-salmon-20  "
+              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+              href={`#${SelectedPage.ContactUs}`}>
               <p>Learn More</p>
 
             </AnchorLink>
@@ -64,7 +64,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
         </div>
         <div className="flex basis-4/5 justify-center md:z-10
-        md:ml-40 md:mt-16 md:justify-items-end">
+        md:ml-40 md:mt-32 md:justify-items-end">
           <img alt="homepage" src={Homepage} />
         </div>
 

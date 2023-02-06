@@ -2,13 +2,12 @@ import Navbar from "@/scenes/navbar"
 import { useState } from "react"
 import { SelectedPage } from "@/shared/types"
 import { useEffect } from "react"
-import Home from "./scenes/home"
-import Hero from "./components/Hero"
+import Home from "@/scenes/Home"
 import Benefits from "@/scenes/Benefits"
-import Header from "./components/Header"
 import Classes from "@/scenes/Classes"
 import ContactUs from "@/scenes/Contact"
-import Footer from "./scenes/Footer"
+import Footer from "@/scenes/Footer"
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -28,7 +27,7 @@ function App() {
 
 
   return (
-    <div className="app bg-gray-100">
+    <div className="app bg-black">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -40,13 +39,11 @@ function App() {
         setSelectedPage={setSelectedPage} />
       <Classes
         setSelectedPage={setSelectedPage} />
+  
       <ContactUs
         setSelectedPage={setSelectedPage} />
-         <Footer
-        setSelectedPage={setSelectedPage} />
-
-
-
+      <Footer
+      />
 
     </div>
   )
