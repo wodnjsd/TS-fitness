@@ -13,27 +13,27 @@ import trainer from '@/assets/trainer.jpg'
 const classes: Array<ClassType> = [
   {
     name: "Weight Training",
-    description: "fjsaklsa",
+    description: "Build your resistance",
     image: weights
   },
   {
     name: "Reformer Pilates",
-    description: "fjsaklsa",
+    description: "Improve your strength and flexibility",
     image: pilates
   },
   {
     name: "Swimming",
-    description: "fjsaklsa",
+    description: "Heated outdoor and indoor pools",
     image: swim
   },
   {
     name: "Dance",
-    description: "fjsaklsa",
+    description: "From ballet to K-pop",
     image: dance
   },
   {
     name: "Core & Balance",
-    description: "fjsaklsa",
+    description: "Daily essential workouts",
     image: core
   },
 ]
@@ -67,7 +67,7 @@ const Classes = ({ setSelectedPage }: Props) => {
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[3000px] whitepsace-nowrap">
+          <ul className="w-[2500px] whitepsace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}

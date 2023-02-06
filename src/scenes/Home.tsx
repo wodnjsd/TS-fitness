@@ -32,9 +32,9 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}>
             <div>
-              <div className="text-6xl text-white uppercase font-bold">
-                <h1 className="">Shape Your</h1>
-                <h1 className="">Ideal Body</h1>
+              <div className="text-6xl uppercase font-bold">
+                <h1 >Shape Your</h1>
+                <h1 >Ideal Body</h1>
 
               </div>
             </div>
@@ -64,7 +64,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
         </div>
         <div className="flex basis-4/5 justify-center md:z-10
-        md:ml-40 md:mt-32 md:justify-items-end">
+        md:ml-40 md:mt-36 md:justify-items-end">
           <img alt="homepage" src={Homepage} />
         </div>
 
