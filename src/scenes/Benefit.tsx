@@ -25,22 +25,18 @@ const Benefit = ({ icon, title, description, nums, setSelectedPage }: Props) => 
         <div className="rounded-full  bg-salmon-10 p-4">
           {icon}
         </div>
-
       </div>
       <h4 className="font-bold">
         {title}
-
       </h4>
       <p className="my-3">    
-      <CountUp delay={5} end={nums} />
+      <CountUp delay={5} end={nums} duration={3} />
         {description}</p>
       <AnchorLink className="text-sm font-bold text-gray-300 hover:text-salmon-20"
         onClick={() => setSelectedPage(SelectedPage.ContactUs)}
         href={`#${SelectedPage.ContactUs}`}>
         <p>Learn More</p>
-
       </AnchorLink>
-
     </motion.div>
   )
 }
